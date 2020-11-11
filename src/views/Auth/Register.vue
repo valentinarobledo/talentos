@@ -33,6 +33,8 @@
 	</div>
 </template>
 <script>
+import firebase from 'firebase'
+import '@/firebase/init.js'
 export default {
 		data() {
 			return {
@@ -46,7 +48,16 @@ export default {
 		methods: {
 			register(){
 				if(this.name && this.email && this.password){
-					//enviar form
+					firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+						.then(user=>{
+							this.name=''
+							this.email=''
+							this.password=''
+							console.log(user)
+
+						}).catch(err => {
+							this.error = err.message
+						})
 				}
 				else{
 					this.error='Todos los campos son requeridos'
