@@ -1,29 +1,20 @@
 <template>
-	<div class="container" style="margin-top:50px;">
-			<div class="columns">
-					<div class="columns is-6 is-offset-3">
-						<h3 class="title is-3">Iniciar Sesión</h3>
+	<div class="container">
+					<div class="login">
+						<h3 class="title">Iniciar Sesión</h3>
 						<form action="#" @submit.prevent="login">
-
-							<div class="field">
+							<div class="form-group">
 								<label class="label">Email</label>
-								<div class="control">
-									<input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" v-model="email">
-								</div>
+								<b-form-input id="input-1"  type="email" v-model="email" placeholder="usuario@utp.edu.co"></b-form-input>
 							</div>
-								<div class="field">
+							<div class="form-group">
 								<label class="label">Contraseña</label>
-								<div class="control">
-									<input class="input" type="password" v-model="password">
-								</div>
+								<b-form-input id="input-2"  type="password" v-model="password"></b-form-input>
 							</div>
-							<button type="submit" class="button is-primary">Iniciar</button>
+							<button type="submit" class="btn btn-info">Iniciar</button>
 						</form>
-						<div class="notification is-danger" v-if="error">
-							{{ error }}
-						</div>
+						<b-alert show variant="danger" v-if="error">{{ error }}}</b-alert>
 					</div>
-			</div>
 	</div>
 </template>
 <script>
@@ -58,3 +49,10 @@ export default {
 		}
 }
 </script>
+<style lang="scss">
+form{
+	padding-top: 2em;
+	padding-left:25%;
+	padding-right:25%;
+}
+</style>

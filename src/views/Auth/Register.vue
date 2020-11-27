@@ -1,35 +1,26 @@
 <template>
 	<div class="container" style="margin-top:50px;">
-			<div class="columns">
-					<div class="columns is-6 is-offset-3">
-						<h3 class="title is-3">Crear una cuenta</h3>
-						<form action="#" @submit.prevent="register">
-							<div class="field">
-								<label class="label">Name</label>
-								<div class="control">
-									<input class="input" type="text" placeholder="e.g Alex Smith" v-model="name">
-								</div>
-							</div>
-
-							<div class="field">
-								<label class="label">Email</label>
-								<div class="control">
-									<input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" v-model="email">
-								</div>
-							</div>
-								<div class="field">
-								<label class="label">Contraseña</label>
-								<div class="control">
-									<input class="input" type="password" v-model="password">
-								</div>
-							</div>
-							<button type="submit" class="button is-primary">Registrar</button>
-						</form>
-						<div class="notification is-danger" v-if="error">
-							{{ error }}
-						</div>
+		<div>
+			<div>
+				<h3 class="title">Crear una cuenta</h3>
+				<form action="#" @submit.prevent="register">
+					<div class="form-group">
+						<label class="label">Nombre Completo</label>
+						<b-form-input id="input-1"  type="text" v-model="name" placeholder="Ej: Valentina Robledo"></b-form-input>
 					</div>
+					<div class="form-group">
+								<label class="label">Email</label>
+								<b-form-input id="input-2"  type="email" v-model="email" placeholder="usuario@utp.edu.co"></b-form-input>
+					</div>
+					<div class="form-group">
+								<label class="label">Contraseña</label>
+								<b-form-input id="input-1"  type="password" v-model="password"></b-form-input>
+					</div>
+					<button type="submit" class="btn btn-primary">Registrar</button>
+				</form>
+				<b-alert show variant="danger" v-if="error">{{ error }}</b-alert>
 			</div>
+		</div>
 	</div>
 </template>
 <script>

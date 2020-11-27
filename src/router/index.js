@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Login from '../views/Auth/Login.vue'
 import Register from '../views/Auth/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
+import Student from '../views/Student.vue'
+import Class from '../views/Class.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,16 @@ const routes = [
     path: '/dahsboard',
     name: 'Dashboard',
     component:Dashboard
+  },
+  {
+    path: '/student',
+    name: 'Student',
+    component:Student
+  },
+  {
+    path: '/class',
+    name: 'Class',
+    component:Class
   }
 ]
 
