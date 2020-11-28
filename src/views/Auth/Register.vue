@@ -1,8 +1,31 @@
 <template>
-	<div class="container" style="margin-top:50px;">
-		<div>
-			<div>
-				<h3 class="title">Crear una cuenta</h3>
+	<div class="register" style="margin-top:50px;">
+    <div id="nav">
+      <Nav/>
+    </div>
+			<div class="bg_login">
+				<h3 class="title-login">Crear una cuenta</h3>
+				<div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>	
+      </div>
+			</div>
+			<div class="container">
 				<form action="#" @submit.prevent="register">
 					<div class="form-group">
 						<label class="label">Nombre Completo</label>
@@ -20,13 +43,16 @@
 				</form>
 				<b-alert show variant="danger" v-if="error">{{ error }}</b-alert>
 			</div>
-		</div>
 	</div>
 </template>
 <script>
 import firebase from 'firebase'
 import '@/firebase/init.js'
+import Nav from '@/components/layout/Nav.vue'
 export default {
+  components: {
+    Nav
+  },
 		data() {
 			return {
 				name:'',

@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div id="nav">
+      <Nav/>
+    </div>
     <div class="bg_home">
       <div class="banner_img">
         <img class="logo" width="400" src="../assets/LOGO.png" alt="">
@@ -87,11 +90,11 @@
 
 <script>
 // @ is an alias to /src
-
+import Nav from '@/components/layout/Nav.vue'
 export default {
   name: 'Home',
   components: {
-
+    Nav
   }
 }
 </script>

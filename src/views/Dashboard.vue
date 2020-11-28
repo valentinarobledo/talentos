@@ -1,31 +1,41 @@
 <template>
 	<div class="dashborad">
-		<div class="container">
-			<b-card-group deck>
-      <b-card bg-variant="primary" text-variant="white" header="Grupos" class="text-center">
-        <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-      </b-card>
-
-      <b-card bg-variant="warning" text-variant="white" header="Reportes" class="text-center">
-        <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-      </b-card>
-
-      <b-card bg-variant="success" text-variant="white" header="Documentos" class="text-center">
-        <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
-      </b-card>
-    </b-card-group>
-		</div>
+    <div id="navbar">
+      <Navbar/>
+    </div>
+      <div class="center">
+        <div class="title-dash">Bienvenidos a Talentos</div>
+      </div>
 	</div>
 </template>
 
 <script>
+import Navbar from '@/components/layout/Navbar.vue'
 export default {
-    
+  components: {
+    Navbar
+  }
 }
 </script>
 
 <style lang="scss">
-.text-center{
-	text-align: center;
+.center{
+  height:68vh;
+  background-repeat: no-repeat;
+  background: url('../assets/3.png');
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.title-dash{
+  margin-left:auto;
+  margin-right: auto;
+  text-align:center;
+  font-family: 'Nerko One', cursive;
+  font-size:60px;
+  color:#59636d;
+
+
+	animation: movimiento 5s linear infinite;	
 }
 </style>

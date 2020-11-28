@@ -6,6 +6,8 @@ import Register from '../views/Auth/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Student from '../views/Student.vue'
 import Class from '../views/Class.vue'
+import Reportes from '../views/Reportes.vue'
+
 
 Vue.use(VueRouter)
 
@@ -26,7 +28,7 @@ const routes = [
     component:Register
   },
   {
-    path: '/dahsboard',
+    path: '/dashboard',
     name: 'Dashboard',
     component:Dashboard
   },
@@ -39,7 +41,12 @@ const routes = [
     path: '/class',
     name: 'Class',
     component:Class
-  }
+  },
+  {
+    path: '/report',
+    name: 'Reportes',
+    component:Reportes
+  }  
 ]
 
 const router = new VueRouter({
