@@ -13,6 +13,7 @@
 										<th>Nombre del reporte</th>
 										<th>Grado</th>
 										<th>Fecha</th>
+										<th>Archivo</th>
 										<th>Acciones</th>
 								</tr>
 						</thead>
@@ -21,6 +22,7 @@
 								<td>Fonoaudiología</td>
 								<td>Grado 1</td>
 								<td>Nov 15 2020</td>
+								<td>archivo.pdf</td>
 								<td>
 									<button class="btn btn-primary">Editar</button>
 									<button class="btn btn-danger">Eliminar</button>
@@ -40,3 +42,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+	.banner-report{
+		background: url('../assets/2.png');
+		height: 60vh;
+		display:flex;
+		align-items: center;
+		position:relative;
+	}
+</style>
