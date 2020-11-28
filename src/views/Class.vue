@@ -9,6 +9,7 @@
 			</div>
 		</div>			
 		<div class="container">
+			<button v-b-modal.modal-add class="btn btn-add">Agregar +</button>
 				<table class="table">
 						<thead class="thead-dark">
 								<tr>
@@ -31,13 +32,20 @@
 						</tbody>
 				</table>
 		</div>
+		<b-modal id="modal-add" title="Añadir nueva clase" hide-footer>
+    <div class="container">
+			<Nueva/>
+		</div>
+  </b-modal>
 	</div>
 </template>
 <script>
 import Navbar from '@/components/layout/Navbar.vue'
+import  Nueva from '@/components/Nueva.vue'
 export default {
   components: {
-    Navbar
+		Navbar,
+		Nueva
   }
 }
 </script>

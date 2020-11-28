@@ -1,8 +1,20 @@
 <template>
-	<div class="register" style="margin-top:50px;">
-    <div id="nav">
-      <Nav/>
-    </div>
+	<div class="register">
+		<div class="banner_login">
+      <div class="header">
+        <div class="buttons">
+        <router-link to="/">
+          <div class="inicio">Inicio</div>
+        </router-link>  
+        <router-link to="/login">
+          <button class="btn btn-login">Ingresar</button>
+        </router-link>
+        <router-link to="/register">
+          <button class="btn btn-register">Registrar</button>
+        </router-link>
+        </div>
+      </div>			
+		</div>
 			<div class="bg_login">
 				<h3 class="title-login">Crear una cuenta</h3>
 				<div class="burbujas">
@@ -48,11 +60,9 @@
 <script>
 import firebase from 'firebase'
 import '@/firebase/init.js'
-import Nav from '@/components/layout/Nav.vue'
+
 export default {
-  components: {
-    Nav
-  },
+
 		data() {
 			return {
 				name:'',

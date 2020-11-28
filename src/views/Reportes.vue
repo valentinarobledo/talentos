@@ -7,6 +7,7 @@
 				<div class="title-class">Reportes</div>
 			</div>  
 			<div class="container">
+				<button class="btn btn-add" v-b-modal.modal-add>Agregar +</button>
 				<table class="table">
 						<thead class="thead-dark">
 								<tr>
@@ -30,15 +31,22 @@
 							</tr>
 						</tbody>
 				</table>				
-			</div>      
+			</div>  
+		<b-modal id="modal-add" title="Subir nuevo reporte" hide-footer>
+    <div class="container">
+			<NewReport/>
+		</div>
+  </b-modal>			    
     </div>
 </template>
 
 <script>
 import Navbar from '@/components/layout/Navbar.vue'
+import NewReport from '@/components/NewReport.vue'
 export default {
   components: {
-    Navbar
+		Navbar,
+		NewReport
   }
 }
 </script>

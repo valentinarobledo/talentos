@@ -7,6 +7,7 @@
 				<div class="title-class">Gestión de Alumnos</div>
 			</div>
 			<div class="container">
+				<button v-b-modal.modal-add class="btn btn-add">Agregar +</button>
 				<table class="table">
 						<thead class="thead-dark">
 								<tr>
@@ -30,20 +31,40 @@
 									<button class="btn btn-danger">Eliminar</button>
 								</td>
 							</tr>
+							<tr>
+								<td>Estudiante 2</td>
+								<td>Acudiente 2</td>
+								<td>3125733059</td>
+								<td>usuario2@gmail.com</td>
+								<td>Calle # barrio</td>
+								<td>
+									<button class="btn btn-primary">Editar</button>
+									<button class="btn btn-danger">Eliminar</button>
+								</td>
+							</tr>							
 						</tbody>
 				</table>	
-			</div>		
+			</div>
+  <b-modal id="modal-add" title="Agregar Estudiante" hide-footer>
+    <div class="container">
+			<AddStudent/>
+		</div>
+  </b-modal>					
 	</div>
 </template>
 <script>
 import Navbar from '@/components/layout/Navbar.vue'
+import AddStudent from '@/components/AddStudent.vue'
+
 export default {
   components: {
-    Navbar
+		Navbar,
+		AddStudent
   }
 }
 </script>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 .banner-student{
 	background: url('../assets/4.png');
 	height:60vh;
@@ -51,6 +72,16 @@ export default {
 	display: flex;
 	align-items: center;	
 	
+}
+.btn-add{
+	background:#ff9600 !important;
+	color:white  !important;
+	border-radius:30px !important;
+	position:relative;
+	float:right;
+	margin-bottom:20px;
+	font-family: 'Nerko One', cursive;
+	font-size:24px !important;
 }
 
 	

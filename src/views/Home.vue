@@ -1,9 +1,20 @@
 <template>
   <div class="home">
-    <div id="nav">
-      <Nav/>
-    </div>
-    <div class="bg_home">
+    <div class="banner">
+      <div class="header">
+        <div class="buttons">
+        <router-link to="/">
+          <div class="inicio">Inicio</div>
+        </router-link>  
+        <router-link to="/login">
+          <button class="btn btn-login">Ingresar</button>
+        </router-link>
+        <router-link to="/register">
+          <button class="btn btn-register">Registrar</button>
+        </router-link>
+        </div>
+      </div>
+      <div class="bg_home">
       <div class="banner_img">
         <img class="logo" width="400" src="../assets/LOGO.png" alt="">
       </div>
@@ -25,6 +36,7 @@
         <div class="burbuja"></div>
         <div class="burbuja"></div>
         <div class="burbuja"></div>
+      </div>
       </div>
     </div>
     <div class="container">
@@ -90,12 +102,8 @@
 
 <script>
 // @ is an alias to /src
-import Nav from '@/components/layout/Nav.vue'
 export default {
-  name: 'Home',
-  components: {
-    Nav
-  }
+  name: 'Home'
 }
 </script>
 <style lang="scss">
@@ -126,10 +134,49 @@ export default {
   color:black;
   font-family: 'Nerko One', cursive;
 }
-.bg_home{
+.banner{
   width:100%;
-  height:90vh;
+  height:80vh;
   background:linear-gradient(to right, #FA615B, #EDFF5D);
+}
+.buttons{
+  position:absolute;
+  right:0;
+  padding-right:20px;
+  padding-top:15px;
+  z-index: 1000;
+}
+.inicio{
+  padding-left:30px;
+  font-size:24px;
+  font-family: 'Nerko One';
+  margin-right: 10px;
+  color:white;
+  &:hover{
+    color:#ff9600;
+    text-decoration:none;
+  }
+}
+.btn-login{
+  background:#ff9600 !important;
+  border-radius:20px;
+  color:white !important;
+  font-family: 'Nerko One';
+  margin-right:4px;
+  &:hover{
+    background:#ffc800 !important;
+  }
+}
+.btn-register{
+  border-color:#ff9600 !important;
+  border-radius:20px;
+  font-family: 'Nerko One';
+  &:hover{
+    background:#ff9600;
+    color:white !important;
+  }
+}
+.bg_home{
   position: relative;
   display: flex;
   align-items: center;
@@ -289,7 +336,7 @@ export default {
     opacity: .4;
   }
   100%{
-    bottom:80vh;
+    bottom:90vh;
     opacity: 0;
     }
 }
